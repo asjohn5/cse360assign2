@@ -4,7 +4,6 @@ public class AddingMachine {
 
 	private int total;
 	private String history;
-	static AddingMachine calc = new AddingMachine();
 	
 	//Constructor class
 	public AddingMachine () {
