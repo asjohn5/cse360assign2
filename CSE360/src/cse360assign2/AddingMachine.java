@@ -1,29 +1,41 @@
 package cse360assign2;
 
 public class AddingMachine {
-    private int total;
 
-    public AddingMachine() {
-        total = 0; //not needed - included for clarity
-    }
-    
-    public int getTotal() {
-        return 0;
-    }
-    
-    public void add(int value) {
-    	
-    }
-    
-    public void subtract(int value) {
-    	
-    }
-    
-    public String toString() {
-        return "";
-    }
-    
-    public void clear() {
-    	
-    }
+	private int total;
+	private String history;
+	static AddingMachine calc = new AddingMachine();
+	
+	//Constructor class
+	public AddingMachine () {
+		total = 0;  // not needed - included for clarity
+		history = "0";
+	}
+	
+	//Returns current total
+	public int getTotal () {
+		return total;
+	}
+	
+	//Adds value to total 
+	public void add (int value) {
+		total += value;
+		history +=  " + " + value;
+	}
+	
+	//Subtracts value from total
+	public void subtract (int value) {
+		total -= value;
+		history += " - " + value ;
+	}
+		
+	//Returns string containing history of operations performed
+	public String toString () {
+		return history;
+	}
+
+	//Resets total to 0
+	public void clear() {
+		total = 0;
+	}
 }
